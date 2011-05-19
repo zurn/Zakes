@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<scores>
-    <slow />
-    <medium>
-        <score val="2"></score>
-    </medium>
-    <fast />
-</scores>
