@@ -58,7 +58,7 @@ INCPATH := include \
 LIBPATH :=
 
 # Which files to add to backups, apart from the source code
-EXTRA_FILES := Makefile README.txt
+EXTRA_FILES := Makefile README
 
 # The compiler
 
@@ -111,37 +111,6 @@ backup:
 #		@zip ${BACKUP_DIR}/backup_`date +%d-%m-%y_%H.%M`.zip $(SOURCE) $(HEADERS) $(EXTRA_FILES)
 		@tar czf ${BACKUP_DIR}/$(TARGET)-`date +%d-%m-%y_%H.%M`.tgz $(SOURCE) $(HEADERS) $(EXTRA_FILES)
 		@echo "Backed up."
-
-# Zip up the windows stuff
-zip:
-	@mkdir -p $(TARGET)
-	@mv README.txt ./$(TARGET)
-	@mv $(WINDIR)/* ./$(TARGET)
-	@mv data ./$(TARGET)
-	@rm -f ./$(TARGET)/data/config/settings.xml
-	@rm -f ./$(TARGET)/data/config/controls.xml
-	@zip -r $(TARGET)-`date +%d-%m-%y_%H.%M`.zip $(TARGET)
-	@mv $(TARGET)/*.dll $(WINDIR)
-	@mv $(TARGET)/*.exe $(WINDIR)
-	@mv $(TARGET)/data ./
-	@mv $(TARGET)/README.txt ./
-	@rm -rf $(TARGET)
-	@echo "Zipped up."
-
-# Zip up the windows stuff
-dev-zip:
-	@mkdir -p $(TARGET)
-	@mv README.txt ./$(TARGET)
-	@mv $(WINDIR)/*.exe ./$(TARGET)
-	@mv data ./$(TARGET)
-	@rm -f ./$(TARGET)/data/config/settings.xml
-	@rm -f ./$(TARGET)/data/config/controls.xml
-	@zip -r $(TARGET)-`date +%d-%m-%y_%H.%M`.zip $(TARGET)
-	@mv $(TARGET)/*.exe $(WINDIR)
-	@mv $(TARGET)/data ./
-	@mv $(TARGET)/README.txt ./
-	@rm -rf $(TARGET)
-	@echo "Zipped up."
 
 # Create necessary directories
 dirs:
