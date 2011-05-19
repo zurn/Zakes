@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<settings>
+    <!--Settings configuration-->
+    <volume sfx="0.1" mus="0.2" />
+    <tutorials val="1" />
+    <speed val="1" />
+</settings>
