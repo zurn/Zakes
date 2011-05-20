@@ -14,8 +14,10 @@ Default controls:
 
 Music:
 
-In the folder data/config/ you can place a xml file to specify songs to be played while the game is going on.
-Use this format.  The game can play mp3 and ogg files.
+	In the file  data/config/playlist.xml you can place a list of files to be played while the game is running.
+	The game can play mp3 and ogg files.
+
+	Use this format.
 
 	<?xml version="1.0" ?>
 	<playlist>
