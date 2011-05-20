@@ -1,3 +1,37 @@
+This is a clone of the classic arcade game Snake.
+
+Default controls:
+
+	Arrow keys:
+		Move the player in the appropriate direction.
+		Move the menu cursor up or down.
+		View another difficulty of the high scores.
+
+	Space bar:
+		Selects highlighted menu option.
+		Pauses game.
+
+
+Music:
+
+In the folder data/config/ you can place a xml file to specify songs to be played while the game is going on.
+Use this format.  The game can play mp3 and ogg files.
+
+	<?xml version="1.0" ?>
+	<playlist>
+		<song>./data/music/your_song.ogg</song>
+		<song>./data/music/your_song.mp3</song>
+	</playlist>
+
+
+
+
+Compiled with:
+gcc version 4.4.1 (Ubuntu 4.4.1-4ubuntu9) 
+
+
+
+
 Copyright (c) 2011 Jacob Sadow-Reinshagen
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
