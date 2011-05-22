@@ -192,9 +192,13 @@ int scores::add_score(int speed, player * p)
 
 bool scores::check_score(std::vector<entry> & entries, player *p)
 {
+	if (p->cherry_count == 0) {
+		return false;
+	}
 	if (entries.size() < MAX_SCORES) {
 		return true;
 	}
+
 	entry temp;
 	temp.score = p->cherry_count;
 
