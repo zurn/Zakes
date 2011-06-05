@@ -22,7 +22,7 @@ void game_over::draw()
 	gfx::blendMode();
 	gfx::color(1,0,0);
 	const char * c = "Game over";
-	font * f = gfx::loadFont("./data/fonts/mono.ttf", 66);
+	font * f = gfx::load_font("./data/fonts/mono.ttf", 66);
 
 	f->print(c, 320-f->width(c)/2, 240 - f->height());
 }
@@ -48,6 +48,6 @@ void game_over::enter()
 
 void game_over::exit()
 {
-	audio::stopSfx();
+	audio::stop_sfx();
 }
 

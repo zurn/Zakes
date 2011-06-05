@@ -11,10 +11,10 @@ get_name::get_name(game * g)
 
 	name = "_";
 	options = new keyboard;	
-	title = gfx::loadFont("./data/fonts/mono.ttf", 44);
-	caption = gfx::loadFont("./data/fonts/mono.ttf", 24);
-	select = audio::loadSfx("./data/sfx/select.wav");
-	move = audio::loadSfx("./data/sfx/omove.wav");
+	title = gfx::load_font("./data/fonts/mono.ttf", 44);
+	caption = gfx::load_font("./data/fonts/mono.ttf", 24);
+	select = audio::load_sfx("./data/sfx/select.wav");
+	move = audio::load_sfx("./data/sfx/omove.wav");
 }
 
 get_name::~get_name()

@@ -92,10 +92,10 @@ class gfx
 		static const char * icon;
 		//path to icon .bmp file for the window
 
-		static font * loadFont(const char * path, int ptsize);
+		static font * load_font(const char * path, int ptsize);
 		//uses the font factory to distribute font data
 
-		static image * loadImage(const char * path);
+		static image * load_image(const char * path);
 		//uses the image factory to distrube image data
 
 	private:

@@ -15,21 +15,21 @@ class audio
 	public:
 		static bool init();
 		static void cleanup();
-		static int loadMusic(const char * filename);
+		static int load_music(const char * filename);
 		static void freeMusic();
 
 
 
 		static void song_done();
-		static int playMusic(int loops);
+		static int play_music(int loops);
 		static void toggleMusic();
 		static void stopMusic();
-		static void stopSfx();
-		static void setMusicVol(int vol);
-		static void setSFXvol(int vol);
+		static void stop_sfx();
+		static void set_music_vol(int vol);
+		static void set_sfx_vol(int vol);
 		static void unpauseMusic();
 
-		static sound * loadSfx(const char * filename);
+		static sound * load_sfx(const char * filename);
 
 		static int audio_rate;			//Frequency of audio playback
 		static Uint16 audio_format;		//Format of the audio we're playing

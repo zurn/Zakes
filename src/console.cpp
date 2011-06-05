@@ -4,7 +4,7 @@
 console::console()
 {
 
-	text = gfx::loadFont("./data/mono.ttf", 14);
+	text = gfx::load_font("./data/mono.ttf", 14);
 
 	int MAXLEN = 80;
 	char s[MAXLEN];

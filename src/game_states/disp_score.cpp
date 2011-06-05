@@ -6,11 +6,11 @@ disp_score::disp_score(game * fsm)
 	selected = SLOW;
 	disp_score::fsm = fsm;
 
-	opt = gfx::loadFont("./data/fonts/mono.ttf", 20);
-	opt2 = gfx::loadFont("./data/fonts/mono.ttf", 36);
-	title = gfx::loadFont("./data/fonts/mono.ttf", 44);
-	select = audio::loadSfx("./data/sfx/select.wav");
-	move = audio::loadSfx("./data/sfx/omove.wav");
+	opt = gfx::load_font("./data/fonts/mono.ttf", 20);
+	opt2 = gfx::load_font("./data/fonts/mono.ttf", 36);
+	title = gfx::load_font("./data/fonts/mono.ttf", 44);
+	select = audio::load_sfx("./data/sfx/select.wav");
+	move = audio::load_sfx("./data/sfx/omove.wav");
 }
 
 disp_score::~disp_score()

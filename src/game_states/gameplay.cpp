@@ -20,7 +20,7 @@ void gameplay::draw()
 //	char buf[256];
 //	buf[255] = '\0';
 	const char * buf;
-	font * text = gfx::loadFont("./data/fonts/mono.ttf", 18);
+	font * text = gfx::load_font("./data/fonts/mono.ttf", 18);
 
 	switch (fsm->custom->speed) {
 		case 0: buf = "Game Speed - Slow"; break;

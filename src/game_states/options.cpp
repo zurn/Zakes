@@ -5,11 +5,11 @@ options::options(game * fsm)
 {
 	options::fsm = fsm;
 
-	opt = gfx::loadFont("./data/fonts/mono.ttf", 20);
-	opt2 = gfx::loadFont("./data/fonts/mono.ttf", 16);
-	title = gfx::loadFont("./data/fonts/mono.ttf", 44);
-	select = audio::loadSfx("./data/sfx/select.wav");
-	move = audio::loadSfx("./data/sfx/omove.wav");
+	opt = gfx::load_font("./data/fonts/mono.ttf", 20);
+	opt2 = gfx::load_font("./data/fonts/mono.ttf", 16);
+	title = gfx::load_font("./data/fonts/mono.ttf", 44);
+	select = audio::load_sfx("./data/sfx/select.wav");
+	move = audio::load_sfx("./data/sfx/omove.wav");
 
 	opts.push_back("Sound Effect Volume");
 	opts.push_back("Music Volume");
@@ -22,8 +22,8 @@ options::options(game * fsm)
 	music_vol = fsm->custom->musVol;
 	sfx_vol = fsm->custom->sfxVol;
 
-	audio::setMusicVol(MIX_MAX_VOLUME * music_vol);
-	audio::setSFXvol(MIX_MAX_VOLUME * sfx_vol);
+	audio::set_music_vol(MIX_MAX_VOLUME * music_vol);
+	audio::set_sfx_vol(MIX_MAX_VOLUME * sfx_vol);
 }
 
 options::~options()
@@ -89,7 +89,7 @@ void options::update()
 		if (sfx_vol < 0) {
 			sfx_vol = 0;
 		}
-		audio::setSFXvol(MIX_MAX_VOLUME * sfx_vol);
+		audio::set_sfx_vol(MIX_MAX_VOLUME * sfx_vol);
 		select->play(0,1);
 
 	fsm->custom->musVol = music_vol;
@@ -100,7 +100,7 @@ void options::update()
 		if (sfx_vol > 1.0) {
 			sfx_vol = 1.0;
 		}
-		audio::setSFXvol(MIX_MAX_VOLUME * sfx_vol);
+		audio::set_sfx_vol(MIX_MAX_VOLUME * sfx_vol);
 		select->play(0,1);
 
 	fsm->custom->musVol = music_vol;
@@ -111,7 +111,7 @@ void options::update()
 		if (music_vol < 0) {
 			music_vol = 0;
 		}
-		audio::setMusicVol(MIX_MAX_VOLUME * music_vol);
+		audio::set_music_vol(MIX_MAX_VOLUME * music_vol);
 		select->play(0,1);
 
 	fsm->custom->musVol = music_vol;
@@ -122,7 +122,7 @@ void options::update()
 		if (music_vol > 1.0) {
 			music_vol = 1.0;
 		}
-		audio::setMusicVol(MIX_MAX_VOLUME * music_vol);
+		audio::set_music_vol(MIX_MAX_VOLUME * music_vol);
 		select->play(0,1);
 
 	fsm->custom->musVol = music_vol;
@@ -151,8 +151,8 @@ void options::update()
 				music_vol = fsm->custom->musVol;
 				sfx_vol = fsm->custom->sfxVol;
 
-				audio::setMusicVol(MIX_MAX_VOLUME * music_vol);
-				audio::setSFXvol(MIX_MAX_VOLUME * sfx_vol);
+				audio::set_music_vol(MIX_MAX_VOLUME * music_vol);
+				audio::set_sfx_vol(MIX_MAX_VOLUME * sfx_vol);
 			break;
 			case OM_CONFIG:
 				select->play(0,1);

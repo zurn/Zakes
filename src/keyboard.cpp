@@ -8,9 +8,9 @@ keyboard::keyboard()
 	x = y = 0;
 	xoffset = 56 + 8;
 	yoffset = 122 + 4 +50;
-	special = gfx::loadFont("./data/fonts/mono.ttf", 18);
-	alpha = gfx::loadFont("./data/fonts/mono.ttf",30);
-	move = audio::loadSfx("./data/sfx/omove.wav");
+	special = gfx::load_font("./data/fonts/mono.ttf", 18);
+	alpha = gfx::load_font("./data/fonts/mono.ttf",30);
+	move = audio::load_sfx("./data/sfx/omove.wav");
 //	printf("w: %i h: %i\n", alpha->width(" "), alpha->height());
 
 	//fill in letters with upper and lower case alphabet

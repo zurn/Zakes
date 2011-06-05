@@ -24,7 +24,7 @@ void world::drawChar(const char * c, int x, int y)
 {
 	gfx::blendMode();
 	gfx::color(0,0,1);
-	gfx::loadFont("./data/fonts/mono.ttf", 14)->print(c, x*tile_size, y*tile_size);
+	gfx::load_font("./data/fonts/mono.ttf", 14)->print(c, x*tile_size, y*tile_size);
 }
 
 void world::draw()

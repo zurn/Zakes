@@ -61,7 +61,7 @@ void audio::cleanup()
 	SDL_QuitSubSystem(SDL_INIT_AUDIO);
 }
 
-void audio::stopSfx()
+void audio::stop_sfx()
 {
 	Mix_HaltChannel(-1);
 }
@@ -106,7 +106,7 @@ audio::~audio()
 	SDL_QuitSubSystem(SDL_INIT_AUDIO);
 }
 
-int audio::loadMusic(const char * filename)
+int audio::load_music(const char * filename)
 {
 //	printf("Playing file: %s\n", filename);
 	if (music != NULL)
@@ -129,7 +129,7 @@ void audio::freeMusic()
 	}
 }
 
-int audio::playMusic(int loops)
+int audio::play_music(int loops)
 {
 	if(Mix_PlayMusic(music, loops) == -1) {
 		printf("Mix_PlayMusic: %s\n", Mix_GetError());
@@ -159,17 +159,17 @@ void audio::unpauseMusic()
 	Mix_ResumeMusic();
 }
 
-void audio::setSFXvol(int vol)
+void audio::set_sfx_vol(int vol)
 {
 	Mix_Volume(-1, vol);
 }
 
-void audio::setMusicVol(int vol)
+void audio::set_music_vol(int vol)
 {
 	Mix_VolumeMusic(vol);
 }
 
-sound * audio::loadSfx(const char * filename)
+sound * audio::load_sfx(const char * filename)
 {
 	return sfact->load(filename);
 }
@@ -180,8 +180,8 @@ void audio::song_done()
 		if (songs.music.size() == 0)
 			return;
 
-		audio::loadMusic(songs.music[0].second.c_str());
-		audio::playMusic(0);
+		audio::load_music(songs.music[0].second.c_str());
+		audio::play_music(0);
 		lsong = 0;
 		return;
 	}
@@ -191,6 +191,6 @@ void audio::song_done()
 		i = ran1_int(0, songs.music.size());
 	} while (i == lsong);
 	lsong = i;
-	audio::loadMusic(songs.music[i].second.c_str());
-	audio::playMusic(0);
+	audio::load_music(songs.music[i].second.c_str());
+	audio::play_music(0);
 }

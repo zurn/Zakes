@@ -275,12 +275,12 @@ void gfx::modMode()
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 }
 
-font * gfx::loadFont(const char * path, int ptsize)
+font * gfx::load_font(const char * path, int ptsize)
 {
 	return ffact.load(path, ptsize);
 }
 
-image * gfx::loadImage(const char * path)
+image * gfx::load_image(const char * path)
 {
 	return ifact.load(path);
 }

@@ -16,8 +16,8 @@ player::player(world * w)
 //	head->x = ran1_int(0,level->width);
 //	head->y = ran1_int(0,level->height);
 	level->getFree(head->x, head->y);
-	cherry = audio::loadSfx("./data/sfx/cherry.wav");
-	hit = audio::loadSfx("./data/sfx/hit.wav");
+	cherry = audio::load_sfx("./data/sfx/cherry.wav");
+	hit = audio::load_sfx("./data/sfx/hit.wav");
 	cherry_count = 0;
 }
 
@@ -39,7 +39,7 @@ void player::draw()
 		(*it)->draw();
 	}
 
-	font * text = gfx::loadFont("./data/fonts/mono.ttf", 18);
+	font * text = gfx::load_font("./data/fonts/mono.ttf", 18);
 	
 	gfx::blendMode();
 	gfx::color(0,0,0);
