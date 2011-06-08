@@ -33,7 +33,7 @@ class texture2d
 		//draws texture at coordinates x,y
 		//assumes you called gfx::enter2DMode(..) first
 
-		void drawClipped(int x, int y, SDL_Rect * src);
+		void draw_clipped(int x, int y, SDL_Rect * src);
 		//alters texture coordinates to the dimension of src
 		//draws texture at coordinates x,y
 		//assumes you called gfx::enter2DMode(..) first
@@ -54,7 +54,7 @@ class texture2d
 		void swap(GLfloat &a, GLfloat &b);
 		//swaps contents of a and b
 
-		static GLuint load2DTexture(SDL_Surface *surface, GLfloat *texcoord);
+		static GLuint load_texture(SDL_Surface *surface, GLfloat *texcoord);
 		//converts surface to a gl texture
 		//puts 4 GLfLoats into texcoord representing texture coordinates
 		//returns texture name

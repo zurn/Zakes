@@ -35,7 +35,7 @@ texture2d::texture2d(SDL_Surface * data)
 	h = data->h;
 
 	//Convert the data into an OpenGL texture
-	texture = load2DTexture(data, texcoord);
+	texture = load_texture(data, texcoord);
 
 	//Make texture coordinates easy to understand
 	minX = texcoord[0];
@@ -88,7 +88,7 @@ void texture2d::texture2d::draw(int x, int y)
 
 //-------------------------------------------------------------------
 
-void texture2d::drawClipped(int x, int y , SDL_Rect * src)
+void texture2d::draw_clipped(int x, int y , SDL_Rect * src)
 {
 	GLfloat maxx, maxy, minx, miny;//,t;
 
@@ -121,7 +121,7 @@ void texture2d::drawClipped(int x, int y , SDL_Rect * src)
 
 //-------------------------------------------------------------------
 
-GLuint texture2d::load2DTexture(SDL_Surface *surface, GLfloat *texcoord)
+GLuint texture2d::load_texture(SDL_Surface *surface, GLfloat *texcoord)
 {
 	if (surface == NULL || texcoord == NULL)
 		return 0;

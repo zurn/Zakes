@@ -46,7 +46,7 @@ class image
 		//if flipx!=0 then the image is inverted on the x axis when drawn
 		//if flipy!=0 then the image is inverted on the y axis when drawn
 
-		void drawClipped(int x, int y , SDL_Rect * src, int flipx=0, int flipy=0);
+		void draw_clipped(int x, int y , SDL_Rect * src, int flipx=0, int flipy=0);
 		//assumes src is a valid SDL_Rect
 		//assumes src can be contained within data's width and height
 		//draws the portion of data provided by src onto the screen at x,y

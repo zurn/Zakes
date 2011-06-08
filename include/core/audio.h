@@ -16,7 +16,7 @@ class audio
 		static bool init();
 		static void cleanup();
 		static int load_music(const char * filename);
-		static void freeMusic();
+		static void free_music();
 
 
 
@@ -27,7 +27,7 @@ class audio
 		static void stop_sfx();
 		static void set_music_vol(int vol);
 		static void set_sfx_vol(int vol);
-		static void unpauseMusic();
+		static void unpause_music();
 
 		static sound * load_sfx(const char * filename);
 

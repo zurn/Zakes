@@ -54,7 +54,7 @@ void audio::cleanup()
 {
 	Mix_HaltChannel(-1);
 	Mix_HaltMusic();
-	freeMusic();
+	free_music();
 	if (sfact != NULL)
 		delete sfact;
 	Mix_CloseAudio();
@@ -100,7 +100,7 @@ audio::~audio()
 {
 	Mix_HaltChannel(-1);
 	Mix_HaltMusic();
-	freeMusic();
+	free_music();
 	delete sfact;
 	Mix_CloseAudio();
 	SDL_QuitSubSystem(SDL_INIT_AUDIO);
@@ -110,7 +110,7 @@ int audio::load_music(const char * filename)
 {
 //	printf("Playing file: %s\n", filename);
 	if (music != NULL)
-		freeMusic();
+		free_music();
 
 	music = Mix_LoadMUS(filename);
 
@@ -121,7 +121,7 @@ int audio::load_music(const char * filename)
 	return 1;
 }
 
-void audio::freeMusic()
+void audio::free_music()
 {
 	if (music != NULL) {
 		Mix_FreeMusic(music);
@@ -154,7 +154,7 @@ void audio::toggleMusic()
 		Mix_PauseMusic();
 }
 
-void audio::unpauseMusic()
+void audio::unpause_music()
 {
 	Mix_ResumeMusic();
 }

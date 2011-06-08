@@ -71,7 +71,7 @@ void image::drawRotate(int x, int y, float theta)
 
 //-------------------------------------------------------------------
 
-void image::drawClipped(int x, int y , SDL_Rect * src, int flipx, int flipy)
+void image::draw_clipped(int x, int y , SDL_Rect * src, int flipx, int flipy)
 {
 	if (data == NULL || src == NULL)
 		return;
@@ -81,7 +81,7 @@ void image::drawClipped(int x, int y , SDL_Rect * src, int flipx, int flipy)
 	if (flipy)
 		data->flipy = 1;
 
-	data->drawClipped(x,y,src);
+	data->draw_clipped(x,y,src);
 
 	if (flipx)
 		data->flipx = 0;
